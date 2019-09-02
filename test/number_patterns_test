@@ -1,0 +1,24 @@
+F123 # ID
+"123" # LITERAL
+'1' # LITERAL
+5 : "int" # int ':' LITERAL
+A5 = int # ID '=' INT
+5.0A == 'i'nt # float ID EQ_OP LITERAL ID
+-1u # '-' int
+100 # int
+100.0 # float
+100e-3 #float
+100.0e-3 #float
+0.1 #float
+0.1000000000000000000000000000000000 # float
+0xFF #int
+0xFF.F #float
+0xFF.FFFFFFFFFFFFFFF #float
+0xFF.FP4 #float
+0X0.0000000000 #float
+0X0 #int
+0 #int
+.0 #float
+0. #float
+0f #float
+

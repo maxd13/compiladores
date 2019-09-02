@@ -13,16 +13,15 @@ L			[a-zA-Z_]
 AN          {D}|{L}
 H			[a-fA-F0-9]
 E			[Ee][+-]?{D}+
-HE			[Ee][+-]?{H}+
-FS			(f|F|l|L)
-IS			(u|U|l|L)*
+HE			[Pp][+-]?{D}+
+FS          (f|F)
+IS			(u|U|l|L)
 
 ID {L}{AN}*
 DINT {D}+{IS}?
-HINT 0[xX]{D}+{IS}?
-INT  {DINT}|{HINT}
-DFLOAT {D}+{E}{FS}?|{D}*"."{D}+({E})?{FS}?|{D}+"."{D}*({E})?{FS}?
-HFLOAT 0[xX]{D}+{HE}{FS}?|0[xX]{D}*"."{D}+({HE})?{FS}?|0[xX]{D}+"."{D}*({HE})?{FS}?
+HINT 0[xX]{H}+{IS}?
+DFLOAT {D}+{E}|{D}*"."{D}+{E}?|{D}+"."{D}*{E}?|{D}+{FS}
+HFLOAT 0[xX]{H}+{HE}|0[xX]{H}*"."{H}+{HE}?|0[xX]{H}+"."{H}*{HE}?|0[xX]{H}+"f"
 FLOAT  {DFLOAT}|{HFLOAT}
 CHAR '(\\[0nt\\']|[^\\'])?'
 STR \"(\\[nt\\\"]|[^\\\"])*\"
@@ -41,9 +40,10 @@ LIT {CHAR}|{STR}
 "while"         {return WHILE;}
 
 
+{FLOAT}           {yylval->fval = strtod(yytext, NULL); yyfloat_flag = 1; return NUMERAL;}
+{DINT}            {yylval->ival = strtol(yytext, NULL, 10); yyfloat_flag = 0; yyint_flag = 0; return NUMERAL;}
+{HINT}            {yylval->ival = strtol(yytext, NULL, 16); yyfloat_flag = 0;  yyint_flag = 1; return NUMERAL;}
 {ID}              {strcpy(yylval->text, yytext); return ID;}
-{INT}             {yylval->ival = atoi(yytext); return NUMERAL;}
-{FLOAT}           {yylval->fval = strtof(yytext, NULL); return NUMERAL;}
 {LIT}             {strcpy(yylval->text, yytext); return LITERAL;}
 
 

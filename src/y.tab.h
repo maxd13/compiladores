@@ -87,6 +87,9 @@ extern int yydebug;
 #define EQ_OP 275
 #define MATCH_OP 276
 
+char yyfloat_flag;
+char yyint_flag;
+
 union yystype_s {
   long ival;
   double fval;
