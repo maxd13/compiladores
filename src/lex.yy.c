@@ -1,5 +1,6 @@
+#line 2 "src//lex.yy.c"
 
-#line 3 "lex.yy.c"
+#line 4 "src//lex.yy.c"
 
 #define  YY_INT_ALIGNED short int
 
@@ -584,13 +585,13 @@ int yy_flex_debug = 0;
 #define YY_MORE_ADJ 0
 #define YY_RESTORE_YY_MORE_OFFSET
 char *yytext;
-#line 1 "monga.l"
-#line 3 "monga.l"
+#line 1 "src//monga.l"
+#line 3 "src//monga.l"
 /* lexical grammar greatly adapted from https://www.lysator.liu.se/c/ANSI-C-grammar-l.html */
 #include <stdio.h>
 #include "y.tab.h"
 
-#line 594 "lex.yy.c"
+#line 595 "src//lex.yy.c"
 
 #define INITIAL 0
 
@@ -814,9 +815,9 @@ YY_DECL
 		}
 
 	{
-#line 31 "monga.l"
+#line 31 "src//monga.l"
 
-#line 820 "lex.yy.c"
+#line 821 "src//lex.yy.c"
 
 	while ( 1 )		/* loops until end-of-file is reached */
 		{
@@ -875,211 +876,211 @@ do_action:	/* This label is used only to access EOF actions. */
 
 case 1:
 YY_RULE_SETUP
-#line 32 "monga.l"
+#line 32 "src//monga.l"
 {return AS;}
 	YY_BREAK
 case 2:
 YY_RULE_SETUP
-#line 33 "monga.l"
+#line 33 "src//monga.l"
 {return CHAR;}
 	YY_BREAK
 case 3:
 YY_RULE_SETUP
-#line 34 "monga.l"
+#line 34 "src//monga.l"
 {return ELSE;}
 	YY_BREAK
 case 4:
 YY_RULE_SETUP
-#line 35 "monga.l"
+#line 35 "src//monga.l"
 {return FLOAT;}
 	YY_BREAK
 case 5:
 YY_RULE_SETUP
-#line 36 "monga.l"
+#line 36 "src//monga.l"
 {return IF;}
 	YY_BREAK
 case 6:
 YY_RULE_SETUP
-#line 37 "monga.l"
+#line 37 "src//monga.l"
 {return INT;}
 	YY_BREAK
 case 7:
 YY_RULE_SETUP
-#line 38 "monga.l"
+#line 38 "src//monga.l"
 {return NEW;}
 	YY_BREAK
 case 8:
 YY_RULE_SETUP
-#line 39 "monga.l"
+#line 39 "src//monga.l"
 {return RETURN;}
 	YY_BREAK
 case 9:
 YY_RULE_SETUP
-#line 40 "monga.l"
+#line 40 "src//monga.l"
 {return VOID;}
 	YY_BREAK
 case 10:
 YY_RULE_SETUP
-#line 41 "monga.l"
+#line 41 "src//monga.l"
 {return WHILE;}
 	YY_BREAK
 case 11:
 YY_RULE_SETUP
-#line 44 "monga.l"
+#line 44 "src//monga.l"
 {strcpy(yylval->text, yytext); return ID;}
 	YY_BREAK
 case 12:
 YY_RULE_SETUP
-#line 45 "monga.l"
+#line 45 "src//monga.l"
 {yylval->ival = atoi(yytext); return NUMERAL;}
 	YY_BREAK
 case 13:
 YY_RULE_SETUP
-#line 46 "monga.l"
+#line 46 "src//monga.l"
 {yylval->fval = strtof(yytext, NULL); return NUMERAL;}
 	YY_BREAK
 case 14:
 /* rule 14 can match eol */
 YY_RULE_SETUP
-#line 47 "monga.l"
+#line 47 "src//monga.l"
 {strcpy(yylval->text, yytext); return LITERAL;}
 	YY_BREAK
 case 15:
 YY_RULE_SETUP
-#line 50 "monga.l"
+#line 50 "src//monga.l"
 { return(AND_OP); }
 	YY_BREAK
 case 16:
 YY_RULE_SETUP
-#line 51 "monga.l"
+#line 51 "src//monga.l"
 { return(OR_OP); }
 	YY_BREAK
 case 17:
 YY_RULE_SETUP
-#line 52 "monga.l"
+#line 52 "src//monga.l"
 { return(LE_OP); }
 	YY_BREAK
 case 18:
 YY_RULE_SETUP
-#line 53 "monga.l"
+#line 53 "src//monga.l"
 { return(GE_OP); }
 	YY_BREAK
 case 19:
 YY_RULE_SETUP
-#line 54 "monga.l"
+#line 54 "src//monga.l"
 { return(EQ_OP); }
 	YY_BREAK
 case 20:
 YY_RULE_SETUP
-#line 55 "monga.l"
+#line 55 "src//monga.l"
 { return(MATCH_OP); }
 	YY_BREAK
 case 21:
 YY_RULE_SETUP
-#line 56 "monga.l"
+#line 56 "src//monga.l"
 { return('<'); }
 	YY_BREAK
 case 22:
 YY_RULE_SETUP
-#line 57 "monga.l"
+#line 57 "src//monga.l"
 { return('>'); }
 	YY_BREAK
 case 23:
 YY_RULE_SETUP
-#line 58 "monga.l"
+#line 58 "src//monga.l"
 { return('='); }
 	YY_BREAK
 case 24:
 YY_RULE_SETUP
-#line 59 "monga.l"
+#line 59 "src//monga.l"
 { return(','); }
 	YY_BREAK
 case 25:
 YY_RULE_SETUP
-#line 60 "monga.l"
+#line 60 "src//monga.l"
 { return(':'); }
 	YY_BREAK
 case 26:
 YY_RULE_SETUP
-#line 61 "monga.l"
+#line 61 "src//monga.l"
 { return(';'); }
 	YY_BREAK
 case 27:
 YY_RULE_SETUP
-#line 62 "monga.l"
+#line 62 "src//monga.l"
 { return('{'); }
 	YY_BREAK
 case 28:
 YY_RULE_SETUP
-#line 63 "monga.l"
+#line 63 "src//monga.l"
 { return('}'); }
 	YY_BREAK
 case 29:
 YY_RULE_SETUP
-#line 64 "monga.l"
+#line 64 "src//monga.l"
 { return('('); }
 	YY_BREAK
 case 30:
 YY_RULE_SETUP
-#line 65 "monga.l"
+#line 65 "src//monga.l"
 { return(')'); }
 	YY_BREAK
 case 31:
 YY_RULE_SETUP
-#line 66 "monga.l"
+#line 66 "src//monga.l"
 { return('['); }
 	YY_BREAK
 case 32:
 YY_RULE_SETUP
-#line 67 "monga.l"
+#line 67 "src//monga.l"
 { return(']'); }
 	YY_BREAK
 case 33:
 YY_RULE_SETUP
-#line 68 "monga.l"
+#line 68 "src//monga.l"
 { return('!'); }
 	YY_BREAK
 case 34:
 YY_RULE_SETUP
-#line 69 "monga.l"
+#line 69 "src//monga.l"
 { return('@'); }
 	YY_BREAK
 case 35:
 YY_RULE_SETUP
-#line 70 "monga.l"
+#line 70 "src//monga.l"
 { return('-'); }
 	YY_BREAK
 case 36:
 YY_RULE_SETUP
-#line 71 "monga.l"
+#line 71 "src//monga.l"
 { return('+'); }
 	YY_BREAK
 case 37:
 YY_RULE_SETUP
-#line 72 "monga.l"
+#line 72 "src//monga.l"
 { return('*'); }
 	YY_BREAK
 case 38:
 YY_RULE_SETUP
-#line 73 "monga.l"
+#line 73 "src//monga.l"
 { return('/'); }
 	YY_BREAK
 case 39:
 YY_RULE_SETUP
-#line 76 "monga.l"
+#line 76 "src//monga.l"
 {char c; while((c = input()) != '\n' && c);}
 	YY_BREAK
 case 40:
 YY_RULE_SETUP
-#line 77 "monga.l"
+#line 77 "src//monga.l"
 { /* ignore bad characters */ }
 	YY_BREAK
 case 41:
 YY_RULE_SETUP
-#line 78 "monga.l"
+#line 78 "src//monga.l"
 ECHO;
 	YY_BREAK
-#line 1083 "lex.yy.c"
+#line 1084 "src//lex.yy.c"
 case YY_STATE_EOF(INITIAL):
 	yyterminate();
 
@@ -2074,11 +2075,13 @@ void yyfree (void * ptr )
 
 #define YYTABLES_NAME "yytables"
 
-#line 77 "monga.l"
+#line 77 "src//monga.l"
 
 
 
+#define STANDALONE_LEXER
 
+#if defined STANDALONE_LEXER && ! defined TEST
 int main (int argc, char **argv){
     int code;
 	YYSTYPE value;
@@ -2091,3 +2094,4 @@ int main (int argc, char **argv){
 
     return 0;
 }
+#endif

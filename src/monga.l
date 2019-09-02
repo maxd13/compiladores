@@ -77,7 +77,9 @@ LIT {CHAR}|{STR}
 .			    { /* ignore bad characters */ }
 %%
 
+#define STANDALONE_LEXER
 
+#if defined STANDALONE_LEXER && ! defined TEST
 int main (int argc, char **argv){
     int code;
 	YYSTYPE value;
@@ -90,3 +92,4 @@ int main (int argc, char **argv){
 
     return 0;
 }
+#endif
