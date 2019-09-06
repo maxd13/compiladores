@@ -333,7 +333,7 @@ extern int yylex \
 #undef YY_DECL
 #endif
 
-#line 77 "src//monga.l"
+#line 80 "src//monga.l"
 
 
 #line 340 "src//lex.yy.h"

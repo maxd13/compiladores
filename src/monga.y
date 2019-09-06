@@ -1,6 +1,7 @@
 
 %{
-    //nothing
+//Tue Sep 3 2019
+// @Author: Luiz Carlos Rumbelsperger Viana
 %}
 
 %token AS
@@ -26,6 +27,7 @@
 %token EQ_OP
 %token MATCH_OP
 
+%start programa
 %%
 
 programa : definicao | programa definicao ;

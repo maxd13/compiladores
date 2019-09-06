@@ -1,3 +1,7 @@
+#Tue Sep 3 2019
+# @Author: Luiz Carlos Rumbelsperger Viana
+# greatly adapted from http://www.throwtheswitch.org/s/makefile-4fbf
+
 ifeq ($(OS),Windows_NT)
   ifeq ($(shell uname -s),) # not in a bash-like shell
 	CLEANUP = del /F /Q

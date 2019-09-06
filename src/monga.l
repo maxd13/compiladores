@@ -1,6 +1,9 @@
 
 %{
+//Tue Sep  3 15:16:08 -03 2019
+// @Author: Luiz Carlos Rumbelsperger Viana
 /* lexical grammar greatly adapted from https://www.lysator.liu.se/c/ANSI-C-grammar-l.html */
+
 #include <stdio.h>
 #include "y.tab.h"
 

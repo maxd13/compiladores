@@ -2,6 +2,10 @@
 #include "lex.yy.h"
 #include "unity.h"
 
+//Tue Sep 3 2019
+// @Author: Luiz Carlos Rumbelsperger Viana
+// Using unity test framework, from http://www.throwtheswitch.org/unity
+
 int code;
 YYSTYPE value;
 int i;
@@ -35,7 +39,6 @@ void test_Is_Case_Sensitive(void){
             TEST_ASSERT_EQUAL_STRING(yytext, value.text);
     }
 }
-
 
 void test_Number_Patterns(void){
     i = 0;
