@@ -55,7 +55,7 @@ extern int yydebug;
     INT = 263,
     NEW = 264,
     RETURN = 265,
-    VOID = 266,
+    BOOL = 266,
     WHILE = 267,
     ID = 268,
     NUMERAL = 269,
@@ -65,7 +65,9 @@ extern int yydebug;
     LE_OP = 273,
     GE_OP = 274,
     EQ_OP = 275,
-    MATCH_OP = 276
+    MATCH_OP = 276,
+    TRUE = 277,
+    FALSE = 278
   };
 #endif
 /* Tokens.  */
@@ -77,7 +79,7 @@ extern int yydebug;
 #define INT 263
 #define NEW 264
 #define RETURN 265
-#define VOID 266
+#define BOOL 266
 #define WHILE 267
 #define ID 268
 #define NUMERAL 269
@@ -88,14 +90,15 @@ extern int yydebug;
 #define GE_OP 274
 #define EQ_OP 275
 #define MATCH_OP 276
+#define TRUE 277
+#define FALSE 278
 
-char yyfloat_flag;
-char yyint_flag;
+char yynumber_flag;
 
 union yystype_s {
   long ival;
   double fval;
-  char text [80];
+  char* text;
 };
 
 
@@ -110,5 +113,6 @@ typedef union yystype_s YYSTYPE;
 extern YYSTYPE yylval;
 
 int yyparse (void);
+void try(void* to_try, char c, char* filename);
 
 #endif /* !YY_YY_Y_TAB_H_INCLUDED  */

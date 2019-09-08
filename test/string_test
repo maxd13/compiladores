@@ -1,0 +1,21 @@
+'xyz' # ' ID '
+'c' #char
+'' # empty char, equivalent to '\0'
+'\0' # empty char
+'\1'#char
+'\2' #char
+'\\' #char
+'\n' #char
+'\t' #char
+'\'' #char
+'
+' # \n char
+" #skip
+"#skip"#this is a string
+"" # empty string
+"aa
+  " # string with \n
+"cheese" # normal string
+"\nn\tt\\\"" # string
+"$@!%^&*" #string
+

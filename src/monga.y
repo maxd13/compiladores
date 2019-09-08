@@ -12,7 +12,9 @@
 %token INT
 %token NEW
 %token RETURN
-%token VOID
+%token BOOL
+%token TRUE
+%token FALSE
 %token WHILE
 
 %token ID

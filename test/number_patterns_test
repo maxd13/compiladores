@@ -4,7 +4,7 @@ F123 # ID
 5 : "int" # int ':' LITERAL
 A5 = int # ID '=' INT
 5.0A == 'i'nt # float ID EQ_OP LITERAL ID
--1u # '-' int
+-1 # '-' int
 100 # int
 100.0 # float
 100e-3 #float
@@ -20,5 +20,6 @@ A5 = int # ID '=' INT
 0 #int
 .0 #float
 0. #float
-0f #float
-
+0x23p-2 # float
+25E2  # float
+0x25E2  # int
