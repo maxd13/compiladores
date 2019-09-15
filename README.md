@@ -7,7 +7,7 @@ To install and test it:
 ```sh
 $ git clone https://github.com/maxd13/compiladores.git
 $ cd compiladores
-$ git clone https://github.com/ThrowTheSwitch/Unity.git
+$ git clone https://github.com/ThrowTheSwitch/Unity.git unity
 $ git pull
 $ mkdir -p build/results
 $ touch build/results/Testlex.yy.txt
