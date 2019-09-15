@@ -33,7 +33,7 @@ BUILD_PATHS = $(PATHB) $(PATHD) $(PATHO) $(PATHR)
 SRCT = $(wildcard $(PATHT)*.c)
 
 FLEX = $(shell flex --bison-bridge --header-file=$(PATHS)lex.yy.h -o $(PATHS)lex.yy.c $(PATHS)monga.l)
-BISON = $(shell bison -k --defines=$(PATHS)monga.tab.h -v --report-file=$(PATHB)monga.output $(PATHS)monga.y) 
+BISON = $(shell bison -k --defines=$(PATHS)monga.tab.h -v --report-file=$(PATHB)monga.output -o $(PATHS)monga.tab.c $(PATHS)monga.y) 
 COMPILE=gcc -c
 LINK=gcc
 DEPEND=gcc -MM -MG -MF

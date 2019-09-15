@@ -13,9 +13,3 @@ $ mkdir -p build/results
 $ touch build/results/Testlex.yy.txt
 $ make
 ```
-
-if anything goes wrong during make, try:
-```sh
-$ rm src/lex.yy.c src/lex.yy.h
-$ make
-```

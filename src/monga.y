@@ -41,7 +41,7 @@ void yyerror (char const *s);
 %start programa
 %%
 
-programa : definicao {printf("ACHEI PROGRAMA");} | programa definicao ;
+programa : definicao | programa definicao ;
 definicao : def_variavel | def_funcao ;
 def_variavel : ID ':' tipo ';' ;
 tipo : INT | CHAR | FLOAT | BOOL | tipo '[' ']' ;

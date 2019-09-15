@@ -62,7 +62,7 @@
 
 
 /* Copy the first part of user declarations.  */
-#line 2 "monga.y" /* yacc.c:339  */
+#line 2 "src/monga.y" /* yacc.c:339  */
 
 //Tue Sep 3 2019
 // @Author: Luiz Carlos Rumbelsperger Viana
@@ -70,7 +70,7 @@
 #include "lex.yy.h"
 void yyerror (char const *s);
 
-#line 74 "monga.tab.c" /* yacc.c:339  */
+#line 74 "src/monga.tab.c" /* yacc.c:339  */
 
 # ifndef YY_NULLPTR
 #  if defined __cplusplus && 201103L <= __cplusplus
@@ -90,8 +90,8 @@ void yyerror (char const *s);
 
 /* In a future release of Bison, this section will be replaced
    by #include "monga.tab.h".  */
-#ifndef YY_YY_MONGA_TAB_H_INCLUDED
-# define YY_YY_MONGA_TAB_H_INCLUDED
+#ifndef YY_YY_SRC_MONGA_TAB_H_INCLUDED
+# define YY_YY_SRC_MONGA_TAB_H_INCLUDED
 /* Debug traces.  */
 #ifndef YYDEBUG
 # define YYDEBUG 0
@@ -136,13 +136,13 @@ extern int yydebug;
 
 union YYSTYPE
 {
-#line 10 "monga.y" /* yacc.c:355  */
+#line 10 "src/monga.y" /* yacc.c:355  */
 
   long ival;
   double fval;
   char* text;
 
-#line 146 "monga.tab.c" /* yacc.c:355  */
+#line 146 "src/monga.tab.c" /* yacc.c:355  */
 };
 
 typedef union YYSTYPE YYSTYPE;
@@ -154,11 +154,11 @@ typedef union YYSTYPE YYSTYPE;
 
 int yyparse (void);
 
-#endif /* !YY_YY_MONGA_TAB_H_INCLUDED  */
+#endif /* !YY_YY_SRC_MONGA_TAB_H_INCLUDED  */
 
 /* Copy the second part of user declarations.  */
 
-#line 162 "monga.tab.c" /* yacc.c:358  */
+#line 162 "src/monga.tab.c" /* yacc.c:358  */
 
 #ifdef short
 # undef short
@@ -1381,14 +1381,8 @@ yyreduce:
   YY_REDUCE_PRINT (yyn);
   switch (yyn)
     {
-        case 2:
-#line 44 "monga.y" /* yacc.c:1646  */
-    {printf("ACHEI PROGRAMA");}
-#line 1388 "monga.tab.c" /* yacc.c:1646  */
-    break;
-
-
-#line 1392 "monga.tab.c" /* yacc.c:1646  */
+      
+#line 1386 "src/monga.tab.c" /* yacc.c:1646  */
       default: break;
     }
   /* User semantic actions sometimes alter yychar, and that requires
@@ -1616,7 +1610,7 @@ yyreturn:
 #endif
   return yyresult;
 }
-#line 93 "monga.y" /* yacc.c:1906  */
+#line 93 "src/monga.y" /* yacc.c:1906  */
 
 
 void yyerror (char const *s){
