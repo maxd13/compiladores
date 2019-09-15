@@ -1,10 +1,8 @@
-//Tue Sep 3 2019
-// @Author: Luiz Carlos Rumbelsperger Viana
-/* A Bison parser, made by GNU Bison 3.0.2.  */
+/* A Bison parser, made by GNU Bison 3.0.4.  */
 
 /* Bison interface for Yacc-like parsers in C
 
-   Copyright (C) 1984, 1989-1990, 2000-2013 Free Software Foundation, Inc.
+   Copyright (C) 1984, 1989-1990, 2000-2015 Free Software Foundation, Inc.
 
    This program is free software: you can redistribute it and/or modify
    it under the terms of the GNU General Public License as published by
@@ -32,8 +30,8 @@
    This special exception was added by the Free Software Foundation in
    version 2.2 of Bison.  */
 
-#ifndef YY_YY_Y_TAB_H_INCLUDED
-# define YY_YY_Y_TAB_H_INCLUDED
+#ifndef YY_YY_SRC_MONGA_TAB_H_INCLUDED
+# define YY_YY_SRC_MONGA_TAB_H_INCLUDED
 /* Debug traces.  */
 #ifndef YYDEBUG
 # define YYDEBUG 0
@@ -56,63 +54,44 @@ extern int yydebug;
     NEW = 264,
     RETURN = 265,
     BOOL = 266,
-    WHILE = 267,
-    ID = 268,
-    NUMERAL = 269,
-    LITERAL = 270,
-    AND_OP = 271,
-    OR_OP = 272,
-    LE_OP = 273,
-    GE_OP = 274,
+    TRUE = 267,
+    FALSE = 268,
+    WHILE = 269,
+    ID = 270,
+    NUMERAL = 271,
+    LITERAL = 272,
+    AND_OP = 273,
+    OR_OP = 274,
     EQ_OP = 275,
     MATCH_OP = 276,
-    TRUE = 277,
-    FALSE = 278
+    LE_OP = 277,
+    GE_OP = 278,
+    NOT = 279,
+    NEG = 280
   };
 #endif
-/* Tokens.  */
-#define AS 258
-#define CHAR 259
-#define ELSE 260
-#define FLOAT 261
-#define IF 262
-#define INT 263
-#define NEW 264
-#define RETURN 265
-#define BOOL 266
-#define WHILE 267
-#define ID 268
-#define NUMERAL 269
-#define LITERAL 270
-#define AND_OP 271
-#define OR_OP 272
-#define LE_OP 273
-#define GE_OP 274
-#define EQ_OP 275
-#define MATCH_OP 276
-#define TRUE 277
-#define FALSE 278
-
-char yynumber_flag;
-
-union yystype_s {
-  long ival;
-  double fval;
-  char* text;
-};
-
 
 /* Value type.  */
 #if ! defined YYSTYPE && ! defined YYSTYPE_IS_DECLARED
-typedef union yystype_s YYSTYPE;
+
+union YYSTYPE
+{
+#line 10 "src/monga.y" /* yacc.c:1909  */
+
+  long ival;
+  double fval;
+  char* text;
+
+#line 86 "src/monga.tab.h" /* yacc.c:1909  */
+};
+
+typedef union YYSTYPE YYSTYPE;
 # define YYSTYPE_IS_TRIVIAL 1
 # define YYSTYPE_IS_DECLARED 1
 #endif
 
 
-extern YYSTYPE yylval;
 
 int yyparse (void);
-void try(void* to_try, char c, char* filename);
 
-#endif /* !YY_YY_Y_TAB_H_INCLUDED  */
+#endif /* !YY_YY_SRC_MONGA_TAB_H_INCLUDED  */

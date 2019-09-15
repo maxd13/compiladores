@@ -7,7 +7,9 @@
 #include <stdio.h>
 #include <error.h>
 #include <errno.h>
-#include "y.tab.h"
+#include "monga.tab.h"
+void try(void* to_try, char c, char* filename);
+char yynumber_flag;
 
 void count();
 int read_float(YYSTYPE* yylval);
@@ -132,9 +134,7 @@ void try(void* to_try, char c, char* filename){
     }
 }
 
-#define STANDALONE_LEXER
-
-#if defined STANDALONE_LEXER && ! defined TEST
+#if defined LEXER && ! defined TEST
 int main (int argc, char **argv){
     int code;
 	YYSTYPE value;

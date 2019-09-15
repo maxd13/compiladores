@@ -1,4 +1,4 @@
-#include "y.tab.h"
+#include "monga.tab.h"
 #include "lex.yy.h"
 #include "unity.h"
 
@@ -9,6 +9,7 @@
 int code;
 YYSTYPE value;
 int i;
+extern int yynumber_flag;
 extern int line_num;
 extern int col_num;
 

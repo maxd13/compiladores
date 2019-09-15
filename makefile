@@ -32,11 +32,12 @@ BUILD_PATHS = $(PATHB) $(PATHD) $(PATHO) $(PATHR)
 
 SRCT = $(wildcard $(PATHT)*.c)
 
-FLEX = $(shell flex --bison-bridge --header-file=$(PATHS)/lex.yy.h -o $(PATHS)/lex.yy.c $(PATHS)/monga.l)
+FLEX = $(shell flex --bison-bridge --header-file=$(PATHS)lex.yy.h -o $(PATHS)lex.yy.c $(PATHS)monga.l)
+BISON = $(shell bison -k --defines=$(PATHS)monga.tab.h -v --report-file=$(PATHB)monga.output $(PATHS)monga.y) 
 COMPILE=gcc -c
 LINK=gcc
 DEPEND=gcc -MM -MG -MF
-CFLAGS=-I. -I$(PATHU) -I$(PATHS) -DTEST
+CFLAGS=-I. -I$(PATHU) -I$(PATHS) -DTEST -DYYERROR_VERBOSE
 
 RESULTS = $(patsubst $(PATHT)Test%.c,$(PATHR)Test%.txt,$(SRCT) )
 
@@ -45,7 +46,7 @@ FAIL = `grep -s FAIL $(PATHR)*.txt`
 IGNORE = `grep -s IGNORE $(PATHR)*.txt`
 
 test: $(BUILD_PATHS) $(RESULTS)
-	$(FLEX)
+	$(FLEX) $(BISON)
 	@echo "-----------------------\nIGNORES:\n-----------------------"
 	@echo "$(IGNORE)"
 	@echo "-----------------------\nFAILURES:\n-----------------------"
@@ -57,7 +58,7 @@ test: $(BUILD_PATHS) $(RESULTS)
 $(PATHR)%.txt: $(PATHB)%.$(TARGET_EXTENSION)
 	-./$< > $@ 2>&1
 
-$(PATHB)Test%.$(TARGET_EXTENSION): $(PATHO)Test%.o $(PATHO)%.o $(PATHU)unity.o #$(PATHD)Test%.d
+$(PATHB)Test%.$(TARGET_EXTENSION): $(PATHO)Test%.o $(PATHO)%.o $(PATHO)lex.yy.o $(PATHU)unity.o #$(PATHD)Test%.d
 	$(LINK) -o $@ $^
 
 $(PATHO)%.o:: $(PATHT)%.c
