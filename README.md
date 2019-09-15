@@ -11,5 +11,6 @@ $ git clone https://github.com/ThrowTheSwitch/Unity.git
 $ git pull
 $ mkdir -p build/results
 $ touch build/results/Testlex.yy.txt
+$ touch build/results/Testmonga.tab.txt
 $ make
 ```
